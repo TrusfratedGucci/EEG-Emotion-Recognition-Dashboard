@@ -12,7 +12,7 @@ import os
 
 st.set_page_config(page_title="EEG Emotion Recognition Results Dashboard", layout="wide")
 
-st.title("EEG Emotion Recognition Dashboard")
+st.title("EEG Emotion Recognition with SRAN Results Comparison Dashboard")
 st.info("Cross-Subject EEG Emotion Recognition using LOSO Evaluation")
 
 # --------------------------------------------------
