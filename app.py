@@ -247,11 +247,20 @@ df_box = pd.DataFrame({
 fig_box = px.box(df_box, x="Method", y="Accuracy", points="all")
 st.plotly_chart(fig_box, use_container_width=True)
 
+st.caption("Lower variability is preferred, as it indicates the model performs more consistently across different individuals.")
+
 # --------------------------------------------------
 # Confusion Matrix
 # --------------------------------------------------
 
 st.subheader("Confusion Matrix")
+
+st.write(
+    "This confusion matrix shows how well the model classifies each emotion. "
+    "Each row represents the true emotion, and each column represents the predicted emotion. "
+    "Values closer to 1 (darker cells) indicate correct predictions, especially along the diagonal. "
+    "Off-diagonal values represent misclassifications."
+)
 
 labels = [0, 1, 2]  # numeric labels in your dataset
 label_names = ["Positive", "Neutral", "Negative"]
@@ -272,6 +281,10 @@ fig_cm = px.imshow(
 )
 
 st.plotly_chart(fig_cm, use_container_width=True)
+
+st.caption(
+    "Ideal case: most values should be concentrated along the diagonal (top-left to bottom-right)."
+)
 # --------------------------------------------------
 # Model Comparison
 # --------------------------------------------------
