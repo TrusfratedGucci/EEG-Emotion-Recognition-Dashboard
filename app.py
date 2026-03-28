@@ -233,7 +233,12 @@ st.write(f"The model improved for {positive} out of 20 subjects.")
 # --------------------------------------------------
 
 st.subheader("Inter-Subject Variability")
-
+st.write(
+    "This chart visualises inter-subject variability in model performance. "
+    "Each point represents a subject, while the box shows the overall distribution. "
+    "A tighter box (lower spread) indicates more consistent performance across individuals, "
+    "which suggests better generalisation."
+)
 df_box = pd.DataFrame({
     "Accuracy": list(ref_plot["Accuracy"] * 100) + list(current_plot["Accuracy"] * 100),
     "Method": [comparison_method] * 20 + [method_choice] * 20
