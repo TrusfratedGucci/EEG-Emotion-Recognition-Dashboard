@@ -10,7 +10,7 @@ import os
 # Page Config
 # --------------------------------------------------
 
-st.set_page_config(page_title="EEG Emotion Recognition Dashboard", layout="wide")
+st.set_page_config(page_title="EEG Emotion Recognition Results Dashboard", layout="wide")
 
 st.title("EEG Emotion Recognition Dashboard")
 st.info("Cross-Subject EEG Emotion Recognition using LOSO Evaluation")
